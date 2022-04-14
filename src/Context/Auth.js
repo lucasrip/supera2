@@ -6,22 +6,19 @@ export const Context = createContext({});
 export const AuthProvider = (props) =>
 {
     const [produtos,setProdutos]= useState([]);
-    const capas= {};
-
-    function importAll(pasta,capas) 
-    {
-     pasta.keys().forEach((imagem) =>(capas[imagem] = pasta(imagem)));
-    }
-  
-      
-    importAll(require.context('../assets/capas', true, /\.png$/),capas);
-   console.log(capas)
-
-
-
-
+    const [estaLogado,setEstaLogado]= useState(false);
+    const [userLogado,setUserLogado]= useState();
+   
   return(
-     <Context.Provider value={{setProdutos,produtos}}>
+     <Context.Provider value={
+        {
+           setProdutos,
+           produtos,
+           estaLogado,
+           setEstaLogado,
+           userLogado,
+           setUserLogado
+        }}>
         {props.children}
      </Context.Provider>
  )

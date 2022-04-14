@@ -11,6 +11,10 @@ a
 {
     text-decoration:none;
 }
+body
+{
+    position:relative;
+}
 a:visited, a:link
 {
     color:#ffffff;

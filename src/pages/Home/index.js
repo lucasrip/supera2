@@ -2,7 +2,9 @@ import {useContext,useEffect} from 'react';
 import {HomeContainer} from './style.js';
 import { Context } from '../../Context/Auth';
 import axios from "axios";
+import Jogo from '../../Components/Jogo';
 
+import Up from '../../assets/icons/up.png';
 
 export default function Home()
 {
@@ -14,18 +16,47 @@ export default function Home()
       
         axios.get(api)
         .then((response)=>{
-         setProdutos(JSON.stringify(response.data)) ;
+         setProdutos(response.data) ;
         })
         .catch((err)=>{
           console.log(err)
         })
   },[setProdutos]) 
 
-   
+  function voltaTopo()
+  {
+    
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    }) 
+  }
+
   return(
      <HomeContainer>
-          <h1>home</h1>
-          <p>zxczxxxxczxc</p>
+          {
+           produtos.map(jogo=>{
+             return(
+               <div  key={jogo.id}>
+                       <Jogo 
+               id={jogo.id}
+               name={jogo.name}
+               price={jogo.price}
+               score={jogo.score}
+               image={jogo.image}
+            />
+               </div>
+          
+             )
+           
+           }) 
+          }
+          <img 
+          onClick={voltaTopo}
+          className='voltarTopo' 
+          src={Up} alt="voltar para o topo" 
+          title="voltar para o topo" 
+          />
      </HomeContainer>
   )
 }
