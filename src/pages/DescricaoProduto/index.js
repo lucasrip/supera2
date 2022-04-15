@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify';
 
-import { useContext} from 'react';
+import { useContext,useEffect,useState} from 'react';
 import { Context } from '../../Context/Auth';
 import { Link } from 'react-router-dom';
 
@@ -17,37 +17,10 @@ import LinksTrailer from './linksJogos';
 
 export default function DescricaoProduto()
 { 
-
-  const {produtos,estaLogado} = useContext(Context);
-
-
-  function verificaLogin()
-  {
-    estaLogado?
-    toast.success('jogoa dicionado com sucesso no carrinho', 
-    {
-     theme:"colored",
-     position: "top-right",
-     autoClose: 4000,
-     closeOnClick: true,
-     pauseOnHover: true,
-    })
-  :
-  toast.error(`para poder adicionar o jogo ao carrinho\n
-  voce precisa estar logado
-  `, 
-  {
-   theme:"colored",
-   position: "top-right",
-   autoClose: 4000,
-   closeOnClick: true,
-   pauseOnHover: true,
-  })
-   
-
-  }
-   
-  const urlJogoName = window.location.href.split('/')[4].split("%20").join(" ");
+  const {produtos,estaLogado,produtosCarrinho,setProdutosCarrinho} = useContext(Context);
+  const [jogoJaEstaNocarrinho,setJogoJaEstaNocarrinho] = useState(false);
+ 
+  const urlJogoName = window.location.href.split('/')[4].split("%20").join(" ").replace("%C3%A9","é");
 
   const jogo = produtos.filter(produto=> produto.name === urlJogoName )
 
@@ -55,12 +28,65 @@ export default function DescricaoProduto()
 
    const procuraLinkJogo = LinksTrailer.filter(link => link.name === urlJogoName)
    
-   const {link}= procuraLinkJogo[0]; 
-  
-    const pegaImage = image!= undefined?require(`../../assets/capas/${image}`):'';
+   const {link,background}= procuraLinkJogo[0]; 
+   
+   const pegaImage = image !== undefined?require(`../../assets/capas/${image}`):'';
 
+
+  useEffect(()=>{
+       const verificado =produtosCarrinho.some(produto => produto.name === name)
+       if(verificado) setJogoJaEstaNocarrinho(true)
+       else setJogoJaEstaNocarrinho(false)
+  },[name,produtosCarrinho,setJogoJaEstaNocarrinho])
+
+
+
+  function adicionaJogoNocarrinho()
+  {   
+   
+
+    if( jogoJaEstaNocarrinho === false && estaLogado)
+    {
+        toast.success(`jogo adicionado com sucesso `, 
+         {
+          theme:"colored",
+          position: "top-right",
+          autoClose: 4000,
+          closeOnClick: true,
+          pauseOnHover: true,
+         })
+        setProdutosCarrinho(prevs=>[...prevs,{...jogo[0],qtd:1,total:price}]);
+        setJogoJaEstaNocarrinho(true);
+    }
+
+    if(jogoJaEstaNocarrinho === true)
+    {
+        toast.error(`o jogo ja esta no carrinho `, 
+         {
+          theme:"colored",
+          position: "top-right",
+          autoClose: 4000,
+          closeOnClick: true,
+          pauseOnHover: true,
+         })
+    }
+
+    if(estaLogado === false)
+    {
+        toast.error(`voce precisa estar logado \n para fazer compras no site`, 
+        {
+         theme:"colored",
+         position: "top-right",
+         autoClose: 4000,
+         closeOnClick: true,
+         pauseOnHover: true,
+        })
+    }
+    
+  }
+   
    return(
-        <DescricaoJogoContainer>
+        <DescricaoJogoContainer background={background}>
             {
                 urlJogoName !== ""?
                 <>
@@ -69,7 +95,7 @@ export default function DescricaoProduto()
               
           </Capa>
             
-            <InfoJogo>
+            <InfoJogo jogoJaEstaNocarrinho={jogoJaEstaNocarrinho}>
                 <div className="iconsList">
                 <strong>{name}</strong>
                     <div>
@@ -90,8 +116,13 @@ export default function DescricaoProduto()
                     <strong>{score}</strong>
                 </span>
                 <div>
-                    <button onClick={verificaLogin}>
-                        adicionar no carrinho
+                    <button onClick={()=>adicionaJogoNocarrinho()} >
+                      {
+                      jogoJaEstaNocarrinho?
+                       "jogo ja esta no carrinho"
+                       :
+                       "adicionar no carrinho"
+                      }  
                     </button> 
                 </div>
               </InfoJogo>
@@ -100,7 +131,6 @@ export default function DescricaoProduto()
                height="315" 
                src={link} 
                title="YouTube video player" 
-               frameborder="0" 
                >
                </iframe>
                </>

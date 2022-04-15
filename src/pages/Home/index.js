@@ -17,14 +17,14 @@ export default function Home()
                  {
                    produtos.map((jogo)=>{
                     return(
-                          <>
+                          
                            <Jogo key={jogo.id}
                                  name={jogo.name}
                                  price={jogo.price}
                                  score={jogo.score}
                                  image={jogo.image}
                             />
-                         </>
+                         
                            )
                   })
                  }

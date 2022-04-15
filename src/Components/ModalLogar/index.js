@@ -22,7 +22,8 @@ export default function ModalLogin({display,controlaModal})
     
      if(typeof user === 'object')
      {
-        toast.success('logado com successo !!', 
+        toast.success(`logado com successo !!\n
+        Seja Bem Vindo ${user.nome}`, 
         {
          theme:"colored",
          position: "top-right",

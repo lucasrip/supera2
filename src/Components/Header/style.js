@@ -9,6 +9,7 @@ justify-content:space-between ;
 align-items:center ;
 width:'100%';
 height: auto;
+background: white;
 img
 {
     width: 7rem ;
@@ -37,6 +38,8 @@ export const UserLogado = styled.div`
    position: relative ;
    
    display:flex ;
+   justify-content:center ;
+   align-items:center ;
    width: auto;
    height: auto;
    img

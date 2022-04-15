@@ -61,6 +61,7 @@ grid-gap:40px;
 margin: auto;
 justify-content:center ;
 position:relative;
+
 @media (max-width:1100px)
 {
     grid-template-columns:repeat(3,auto);

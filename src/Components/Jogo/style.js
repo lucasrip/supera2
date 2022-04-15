@@ -7,7 +7,7 @@ export const JogoContainer = styled.div`
  width: 15rem;
  padding:0.4rem;
  height: auto;
- font-family: 'Roboto', sans-serif;
+ font-family: 'Fira Sans', sans-serif;
  text-align:center ;
 
  img

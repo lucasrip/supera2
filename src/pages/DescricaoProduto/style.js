@@ -10,12 +10,17 @@ min-height:60rem ;
 padding: 20px 0px;
 flex-direction:column ;
 align-items: center;
+background:linear-gradient( #0001,black) no-repeat, url(${(props => props.background?props.background:'')}) no-repeat;
+background-clip: border-box;
+background-size:100% 110%; 
 iframe
 {
     margin-top:30px;
 }
 @media (max-width:650px)
 {
+   background-size:100% 50%; 
+
     iframe
     {
       width:25rem;
@@ -32,6 +37,7 @@ height:auto;
 margin-top: 4rem ;
 font-family: 'Roboto', sans-serif;
 font-size:4rem;
+
 strong
 {
     width:auto ;
@@ -90,7 +96,7 @@ div
    button
   {
     cursor: pointer;
-    background: #0B47A9;
+    background: ${props=>props.jogoJaEstaNocarrinho?"#5577e7f5":"#0B47A9"};
     border:1px solid  #0B47A9;
     width: 15rem;
     height: 3.5rem;
@@ -98,7 +104,7 @@ div
     font-size:1.1rem ;
     font-weight: bold;
     border-radius:10px;
-    color: #fff;
+    color:  ${props=>props.jogoJaEstaNocarrinho?"#0a1d5cf5":"#fff"};;
     transition:background 0.5s ease ;
     &:hover
     {

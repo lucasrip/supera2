@@ -12,11 +12,13 @@ import { Context } from '../../Context/Auth';
 
 import ModalCadastrar from '../ModalCadastrar';
 import ModalLogar from '../ModalLogar';
+import FinalizarCompraModal from '../FinalizarCompraModal';
 
 export default function Header()
 {
     const [cadastrarModalDisplay,setCadastrarModalDisplay] = useState(true);
     const [loginModalDisplay,setLoginModalDisplay] = useState(true);
+    const [finalizaCompra,setFinalizaCompra] = useState(true);
     const [userConfig,setUserConfig] = useState(false);
 
     const { estaLogado,setEstaLogado,userLogado} = useContext(Context);
@@ -58,8 +60,7 @@ export default function Header()
                 
                 :
                 <UserLogado>
-                    <div>
-    
+                       <div>     
                          <img 
                          src={User}
                          onClick={()=>controlaModal(userConfig,setUserConfig)} 
@@ -97,7 +98,10 @@ export default function Header()
                              </div>
                          </UserConfig>
                     </div>
-                    <img src={Carrinho} alt="carrinho de compras de jogo" />
+                    <img 
+                    src={Carrinho} alt="carrinho de compras de jogo"
+                    onClick={()=> controlaModal(finalizaCompra,setFinalizaCompra)}
+                    />
                 </UserLogado>
             }
            
@@ -111,7 +115,10 @@ export default function Header()
              display={loginModalDisplay}
              controlaModal={()=>controlaModal(loginModalDisplay,setLoginModalDisplay)}
              />
-             
+             <FinalizarCompraModal 
+             display={finalizaCompra}
+             controlaModal={()=>controlaModal(finalizaCompra,setFinalizaCompra)}
+             />
 
         </HeaderContainer>
     )
