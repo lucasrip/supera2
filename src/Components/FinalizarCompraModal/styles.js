@@ -13,7 +13,7 @@ height:100vh;
 background-color:#00ccffbf; 
 backdrop-filter: blur(3px);
 backdrop-filter: grayscale(2px);
-z-index: 1000;
+z-index: 100000000000;
 
 `;
 
