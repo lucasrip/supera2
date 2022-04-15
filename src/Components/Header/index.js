@@ -1,8 +1,14 @@
-import { useState} from 'react';
-import { HeaderContainer ,UserStatus} from './style'
+import { useState,useContext} from 'react';
+import { HeaderContainer ,UserStatus,UserLogado, UserConfig} from './style'
+import { Link } from 'react-router-dom';
+
 
 import Logo from '../../assets/logo/logo.png';
 import User from '../../assets/icons/user.png';
+import Carrinho from '../../assets/icons/carrinho.png';
+import Sair from '../../assets/icons/signout.png';
+
+import { Context } from '../../Context/Auth';
 
 import ModalCadastrar from '../ModalCadastrar';
 import ModalLogar from '../ModalLogar';
@@ -11,44 +17,99 @@ export default function Header()
 {
     const [cadastrarModalDisplay,setCadastrarModalDisplay] = useState(true);
     const [loginModalDisplay,setLoginModalDisplay] = useState(true);
+    const [userConfig,setUserConfig] = useState(false);
 
+    const { estaLogado,setEstaLogado,userLogado} = useContext(Context);
 
-    function controlaModalCadastrar() 
+    function controlaModal(modal,setModal)
     {
-        cadastrarModalDisplay?setCadastrarModalDisplay(false):
-        setCadastrarModalDisplay(true)
-    
+        modal?setModal(false):setModal(true)
     }
-
-    
-    function controlaModalLogar() 
+       
+    function deslogar()
     {
-        loginModalDisplay?setLoginModalDisplay(false):
-        setLoginModalDisplay(true)
-    
+        controlaModal(userConfig,setUserConfig)
+        setEstaLogado(false)
     }
-    
-
+   
     return(
         <HeaderContainer>
-            <img src={Logo} alt="logo do nosso Ecommercer" />
-            <UserStatus>
-                <button onClick={controlaModalCadastrar}>
-                    Cadastrar
-                </button>
-                <button onClick={controlaModalLogar}>
-                    Login
-                </button>
-            </UserStatus>
+            <Link to="/">
+              <img src={Logo} alt="logo do nosso Ecommercer" />
+            </Link>
+          
+
+            {
+                estaLogado === false?
+              
+                       <UserStatus>
+                          <button
+                           onClick={()=>controlaModal(cadastrarModalDisplay,setCadastrarModalDisplay)
+                           }>
+                                Cadastrar
+                          </button>
+    
+                          <button 
+                          onClick={()=>controlaModal(loginModalDisplay,setLoginModalDisplay)}
+                          >
+                                Login
+                          </button>
+                       </UserStatus>
+                
+                :
+                <UserLogado>
+                    <div>
+    
+                         <img 
+                         src={User}
+                         onClick={()=>controlaModal(userConfig,setUserConfig)} 
+                         alt="icone de usuario" 
+                         />
+                         <UserConfig display={userConfig}>
+                             <span>
+                                 nome
+                                 <strong>
+                                  {userLogado.nome}
+                                 </strong>
+                             </span>
+                             <span>
+                                 email 
+                                 <strong>
+                                   {userLogado.email}
+                                 </strong>
+                             </span>
+                             <span>
+                                 tell
+                                 <strong>
+                                  {userLogado.tell}
+                                 </strong>
+                             </span>
+                             <span>
+                                 idade
+                                 <strong>
+                                  {userLogado.idade}
+                                 </strong>
+                             </span>
+                             <div>
+                                 <img src={Sair} onClick={deslogar} 
+                                 alt="deslogar da conta" 
+                                 />
+                             </div>
+                         </UserConfig>
+                    </div>
+                    <img src={Carrinho} alt="carrinho de compras de jogo" />
+                </UserLogado>
+            }
+           
 
 
             <ModalCadastrar
              display={cadastrarModalDisplay}
-             controlaModal={controlaModalCadastrar}
+             controlaModal={()=>controlaModal(cadastrarModalDisplay,setCadastrarModalDisplay)}
              />
             <ModalLogar
              display={loginModalDisplay}
-             controlaModal={controlaModalLogar}
+             controlaModal={()=>controlaModal(loginModalDisplay,setLoginModalDisplay)}
              />
              
 

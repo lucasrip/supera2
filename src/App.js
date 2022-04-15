@@ -1,24 +1,28 @@
-import {GlobalStyle,Container} from './styles/globalStyles.js';
+import { BrowserRouter } from "react-router-dom";
+
+import {GlobalStyle} from './styles/globalStyles.js';
 import {AuthProvider} from './Context/Auth';
 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
   
 
 import Header from './Components/Header';
-import Home from './pages/Home';
 import Footer from './Components/Footer';
 
+import Routes from './Routes/index';
 
 export default function App() {
   
   return ( 
-   <AuthProvider>
-     <GlobalStyle/>
-       <Header/>
-       <Home/>
-       <Footer/>
-       <ToastContainer/>
-   </AuthProvider>
+     <BrowserRouter>
+      <AuthProvider>
+         <GlobalStyle/>
+         <Header/>
+           <Routes/>
+         <Footer/>
+         <ToastContainer/>   
+       </AuthProvider>
+     </BrowserRouter>
   )
 }

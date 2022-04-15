@@ -33,7 +33,6 @@ export default function ModalLogin({display,controlaModal})
   
    }
 
-
     return(
         <Modal display={display} controlaModal={controlaModal} method="post">
             <ModalCadastrar>

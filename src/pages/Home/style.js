@@ -11,16 +11,6 @@ grid-gap:40px;
 margin: auto;
 justify-content:center ;
 
- .voltarTopo
-{
- position: fixed;
- width: 3rem;
- height: 3rem;
- right: 30px;
- bottom: 30px;
- cursor: pointer;
- 
-}
 @media (max-width:1100px)
 {
     grid-template-columns:repeat(3,auto);

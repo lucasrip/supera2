@@ -55,6 +55,7 @@ export const ModalCadastrar = styled.div`
   }
   @media (max-width:420px)
   {
+    
      label
      {
         input

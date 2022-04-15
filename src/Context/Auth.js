@@ -7,7 +7,9 @@ export const AuthProvider = (props) =>
 {
     const [produtos,setProdutos]= useState([]);
     const [estaLogado,setEstaLogado]= useState(false);
-    const [userLogado,setUserLogado]= useState();
+    const [userLogado,setUserLogado]= useState({});
+    const [produtoClicado,setProdutoClicado]= useState({});
+    const [produtosCarrinho,setProdutosCarrinho]= useState([]);
    
   return(
      <Context.Provider value={
@@ -17,7 +19,11 @@ export const AuthProvider = (props) =>
            estaLogado,
            setEstaLogado,
            userLogado,
-           setUserLogado
+           setUserLogado,
+           produtosCarrinho,
+           setProdutosCarrinho,
+           produtoClicado,
+           setProdutoClicado
         }}>
         {props.children}
      </Context.Provider>

@@ -24,4 +24,22 @@ span
     font-weight: 500;
     margin-right: 40% ;
 }
+.voltarTopo
+{
+ position: fixed;
+ width: 3rem;
+ height: 3rem;
+ right: 30px;
+ bottom: 30px;
+ cursor: pointer;
+ 
+}
+@media (max-width:900px)
+{
+    span
+    {
+        margin-right: 0px ;
+    }
+    
+}
 `;
