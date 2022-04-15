@@ -7,7 +7,7 @@ export const Context = createContext({});
 export const AuthProvider = (props) =>
 {
     const [produtos,setProdutos]= useState([]);
-    const [estaLogado,setEstaLogado]= useState(true);
+    const [estaLogado,setEstaLogado]= useState(false);
     const [userLogado,setUserLogado]= useState({});
     const [produtosCarrinho,setProdutosCarrinho]= useState([]);
 
