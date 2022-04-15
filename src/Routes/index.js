@@ -4,7 +4,8 @@ import Home from '../pages/Home';
 import DescricaoProduto from "../pages/DescricaoProduto";
 
   export default function Rotas()
-  {  
+  {
+  
       return(
           <Routes>
             <Route index path="/" element={<Home/>} />

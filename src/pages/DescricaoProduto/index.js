@@ -1,30 +1,71 @@
+import { toast } from 'react-toastify';
 
-import { useContext } from "react";
-import { Context } from "../../Context/Auth";
-import { DescricaoJogoContainer,Capa,InfoJogo} from "./style";
+import { useContext} from 'react';
+import { Context } from '../../Context/Auth';
+import { Link } from 'react-router-dom';
+
+import { DescricaoJogoContainer,Capa,InfoJogo,JogoNaoEncontrado} from './style';
 
 import Sony from '../../assets/icons/sony.png';
 import Nintendo from '../../assets/icons/switch.png';
 import Wifi from '../../assets/icons/wifi.png';
 import Globo from '../../assets/icons/globo.png';
 
+import NaoEncontrado from '../../assets/icons/question.png';
+
 import LinksTrailer from './linksJogos';
 
 export default function DescricaoProduto()
-{
-    
-   const {produtoClicado} =useContext(Context);
-  
-   const {name,image,price,score,altJogo} = produtoClicado;
+{ 
 
-   const procuraLinkJogo = LinksTrailer.filter(link => link.name === name)
+  const {produtos,estaLogado} = useContext(Context);
+
+
+  function verificaLogin()
+  {
+    estaLogado?
+    toast.success('jogoa dicionado com sucesso no carrinho', 
+    {
+     theme:"colored",
+     position: "top-right",
+     autoClose: 4000,
+     closeOnClick: true,
+     pauseOnHover: true,
+    })
+  :
+  toast.error(`para poder adicionar o jogo ao carrinho\n
+  voce precisa estar logado
+  `, 
+  {
+   theme:"colored",
+   position: "top-right",
+   autoClose: 4000,
+   closeOnClick: true,
+   pauseOnHover: true,
+  })
+   
+
+  }
+   
+  const urlJogoName = window.location.href.split('/')[4].split("%20").join(" ");
+
+  const jogo = produtos.filter(produto=> produto.name === urlJogoName )
+
+   const {name,image,price,score,altJogo} = jogo[0] || [];
+
+   const procuraLinkJogo = LinksTrailer.filter(link => link.name === urlJogoName)
    
    const {link}= procuraLinkJogo[0]; 
+  
+    const pegaImage = image!= undefined?require(`../../assets/capas/${image}`):'';
 
    return(
         <DescricaoJogoContainer>
-          <Capa>
-              <img src={require(`../../assets/capas/${image}`)} alt={altJogo} />
+            {
+                urlJogoName !== ""?
+                <>
+                <Capa>
+              <img src={pegaImage} alt={altJogo} />
               
           </Capa>
             
@@ -49,7 +90,7 @@ export default function DescricaoProduto()
                     <strong>{score}</strong>
                 </span>
                 <div>
-                    <button>
+                    <button onClick={verificaLogin}>
                         adicionar no carrinho
                     </button> 
                 </div>
@@ -62,6 +103,21 @@ export default function DescricaoProduto()
                frameborder="0" 
                >
                </iframe>
+               </>
+                :
+                <JogoNaoEncontrado>
+                    <img src={NaoEncontrado} alt="icone jogo nao encontrado" />
+                    <h1>
+                        jogo nao encontrado<br/> por favor volte para a<br/>  
+                        {
+                        <Link to="/">
+                             home
+                        </Link>
+                        }
+                    </h1>
+                </JogoNaoEncontrado>
+            }
+          
         </DescricaoJogoContainer>
     )
 }

@@ -6,6 +6,7 @@ position:relative;
 display: flex ;
 width:100% ;
 height: auto;
+min-height:60rem ;
 padding: 20px 0px;
 flex-direction:column ;
 align-items: center;
@@ -136,5 +137,62 @@ span
 @media (max-width:1170px)
 {
     top:10px;
+}
+`;
+
+export const JogoNaoEncontrado = styled.div`
+width:100%;
+height:auto;
+align-items:center ;
+display:flex ;
+justify-content:center;
+text-align: left ;
+font-family: 'Roboto', sans-serif;
+font-size:1.3rem;
+img
+{
+    width:17rem ;
+    height:17rem;
+}
+h1
+{
+    margin-left:15px ;
+}
+a
+{
+    color:#0B47A9;
+    transition: 0.4s ease ;
+}
+a:hover
+{
+    color:#032254;
+    border-bottom:2px solid #032254 ;
+}
+@media (max-width:800px)
+{
+    font-size:1rem;
+    img
+    {
+        width:10rem ;
+        height:10rem;
+    }
+}
+@media (max-width:500px)
+{
+    font-size:0.6rem;
+    img
+    {
+        width:6rem ;
+        height:6rem;
+    }
+}
+@media (max-width:320px)
+{
+    flex-direction:column ;
+    h1
+    {
+        margin-top:20px ;
+    }
+    
 }
 `;

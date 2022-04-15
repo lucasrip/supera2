@@ -1,20 +1,10 @@
-import { useContext, useState } from "react"
 import { JogoContainer } from "./style"
-import { Context } from "../../Context/Auth"
 import { Link } from "react-router-dom"
 
-export default function Jogo({id,name,price,score,image})
+export default function Jogo({name,price,score,image})
 {    
-
-   const {setProdutoClicado} = useContext(Context)
-
-    const altJogo = `imagem do jogo name ${name}`
+    const altJogo = `imagem do jogo ${name}`
    
-    function guardaJogoClicado()
-    {
-        setProdutoClicado({id,name,price,score,image,altJogo})
-    }
-
     return(
         <JogoContainer>
             
@@ -23,7 +13,6 @@ export default function Jogo({id,name,price,score,image})
               src={require(`../../assets/capas/${image}`)} 
               alt={altJogo} 
               title={altJogo}
-              onClick={guardaJogoClicado}
               />
             </Link>
         

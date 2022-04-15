@@ -17,6 +17,6 @@ body
 }
 a:visited, a:link
 {
-    color:#ffffff;
+    color:black;
 }
 `
