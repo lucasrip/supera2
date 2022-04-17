@@ -16,7 +16,21 @@
 5. depois npm start para inciciar o server local do projeto
 6. seja feliz
 
- ### Bibliotecas  neste projeto  []()
+## :heavy_exclamation_mark::heavy_exclamation_mark::heavy_exclamation_mark: Atenção
+### caso os produtos não apareção na pagina Home siga os passos a baixo
+
+
+#### primeiro click em products.json que esta no link do notion do processo seletivo
+#### depois copie o link que estiver na url
+#### com a url va em context > auth
+![print erro](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/Screenshot_15.png)
+
+#### depois altere a variavel const api pelo link que voce copiou do products.json
+![print erro](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/Screenshot_16.png)
+
+#### este erro acontece pois o link tem um tempo de uso depois a aws atualiza ele
+
+ ### Bibliotecas  neste projeto  
 1. [React](https://pt-br.reactjs.org/)
 2. [Styled-Components](https://styled-components.com/)
 3. [Toastift](https://fkhadra.github.io/react-toastify/introduction)
@@ -42,6 +56,8 @@
 
 ## Link do projeto
 [link do projeto na versel](https://supera2.vercel.app/).
+
+muito obrigado por chegar ate aquie e nois 👊 :punch:
 
 
 
