@@ -1,7 +1,7 @@
 
 ![print da tela inicial](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/lucasrip%20_%20supera2-banner%20(1).png)
 
-# E-commerce
+# E-commerce :smirk:
  Este e o primerio desafio do processo seletivo supera feito em react
 
 ### Projeto foi gerado com o react cli 
@@ -16,15 +16,22 @@
 5. depois npm start para inciciar o server local do projeto
 6. seja feliz
 
- ### bibliotecas e sites usados neste projeto  []()
-1.[React](https://pt-br.reactjs.org/)
-2.[Styled-Components](https://styled-components.com/)
-3.[Toastift](https://fkhadra.github.io/react-toastify/introduction)
-4.[React-router-dom@v6](https://reactrouter.com/docs/en/v6/getting-started/overview)
-5.[Axios](https://axios-http.com/ptbr/docs/intro)
+ ### Bibliotecas  neste projeto  []()
+1. [React](https://pt-br.reactjs.org/)
+2. [Styled-Components](https://styled-components.com/)
+3. [Toastift](https://fkhadra.github.io/react-toastify/introduction)
+4. [React-router-dom@v6](https://reactrouter.com/docs/en/v6/getting-started/overview)
+5. [Axios](https://axios-http.com/ptbr/docs/intro)
+ 
+ ### Sites usados neste projeto
+ 1. [photopea](https://www.photopea.com/)
+ 2. [encurtador de url](https://www.encurtador.com.br/url-encurtada.php)
+ 3. [videos incorporados do youtube](https://support.google.com/youtube/answer/171780?hl=pt-BR)
+ 
+ ### programas usados para tirar print da tela e gravaçoes
+1 [link dos recursos de gravacao e print](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden)
+2 [link dos recursos de gravacao e print](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)
 
-
-7. 
  ## Home
 ![print da tela inicial](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/Screenshot_5.png)
 
