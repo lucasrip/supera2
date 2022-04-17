@@ -45,6 +45,7 @@ export default function Header()
                 estaLogado === false?
               
                        <UserStatus>
+                    
                           <button
                            onClick={()=>controlaModal(cadastrarModalDisplay,setCadastrarModalDisplay)
                            }>

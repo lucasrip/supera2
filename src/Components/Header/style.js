@@ -20,6 +20,7 @@ img
 export const UserStatus = styled.div`
    width: auto;
    height: auto;
+   display:flex ;
    button
    {
        border: 0;
@@ -60,7 +61,7 @@ export const UserConfig = styled.div`
    display: ${props=> props.display?'flex':'none'};
    position:absolute ;
    top: 85px ;
-   left:-100px;
+   left:-70%;
    padding:10px ;
    background-color:#fff;  
    width: 15rem;

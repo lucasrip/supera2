@@ -6,8 +6,9 @@ width:100% ;
 padding:30px;
 height:auto;
 display:flex ;
+flex-direction:column ;
 justify-content: center ;
-align-items:start ;
+align-items:end ;
 min-height: 60rem ;
 `;
 

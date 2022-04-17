@@ -96,16 +96,26 @@ div
    button
   {
     cursor: pointer;
+    display:flex ;
+    align-items: center ;
+    justify-content: center ;
     background: ${props=>props.jogoJaEstaNocarrinho?"#5577e7f5":"#0B47A9"};
     border:1px solid  #0B47A9;
-    width: 15rem;
-    height: 3.5rem;
+    width: 18rem;
+    height: 3.3rem;
     font-family: 'Fira Sans', sans-ser;
     font-size:1.1rem ;
     font-weight: bold;
     border-radius:10px;
     color:  ${props=>props.jogoJaEstaNocarrinho?"#0a1d5cf5":"#fff"};;
     transition:background 0.5s ease ;
+    img
+    {
+        margin-left:10px ;
+        width:3rem ;
+        height:erem ;
+    }
+    
     &:hover
     {
         background: #042252;

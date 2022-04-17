@@ -15,6 +15,8 @@ import NaoEncontrado from '../../assets/icons/question.png';
 
 import LinksTrailer from './linksJogos';
 
+import Carrinho from '../../assets/icons/adicionarCarrinho.png';
+
 export default function DescricaoProduto()
 { 
   const {produtos,estaLogado,produtosCarrinho,setProdutosCarrinho} = useContext(Context);
@@ -84,6 +86,12 @@ export default function DescricaoProduto()
     }
     
   }
+
+  useEffect(()=>{
+
+    setJogoJaEstaNocarrinho(false)
+
+  },[estaLogado])
    
    return(
         <DescricaoJogoContainer background={background}>
@@ -116,14 +124,19 @@ export default function DescricaoProduto()
                     <strong>{score}</strong>
                 </span>
                 <div>
-                    <button onClick={()=>adicionaJogoNocarrinho()} >
-                      {
-                      jogoJaEstaNocarrinho?
-                       "jogo ja esta no carrinho"
-                       :
-                       "adicionar no carrinho"
-                      }  
-                    </button> 
+                   {
+                          jogoJaEstaNocarrinho?
+
+                          <button onClick={()=>adicionaJogoNocarrinho()} >
+                             jogo ja esta no carrinho  
+                          </button>
+                          :
+                          <button onClick={()=>adicionaJogoNocarrinho()} >
+                          adicionar no carrinho
+                          <img src={Carrinho} alt="iconde de adicionar ao carrinho" />
+                          </button> 
+                        
+                   }
                 </div>
               </InfoJogo>
               <iframe 
