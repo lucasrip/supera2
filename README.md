@@ -1,70 +1,64 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![print da tela inicial](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/lucasrip%20_%20supera2-banner%20(1).png)
 
-## Available Scripts
+# E-commerce :smirk:
+ Este e o primerio desafio do processo seletivo supera feito em react
 
-In the project directory, you can run:
+### Projeto foi gerado com o react cli 
 
-### `npm start`
+## Versao do node usado neste projeto v16.13.2
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### para rodar esta projeto na sua maquia
+voce precisara do node e react instalados para poder rodar o projeto
+1. click em supera2 no topo da pagina
+2. clone o repositorico em Code 
+3. abra o projeto no seu editor de codigo
+4. use o comando npm install
+5. depois npm start para inciciar o server local do projeto
+6. seja feliz
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :heavy_exclamation_mark::heavy_exclamation_mark::heavy_exclamation_mark: Atenção
+### caso os produtos não apareção na pagina Home siga os passos a baixo
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### primeiro click em products.json que esta no link do notion do processo seletivo
+#### depois copie o link que estiver na url
+#### com a url va em context > auth
+![print erro](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/Screenshot_15.png)
 
-### `npm run build`
+#### depois altere a variavel const api pelo link que voce copiou do products.json
+![print erro](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/Screenshot_16.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### este erro acontece pois o link tem um tempo de uso depois a aws atualiza ele
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ ### Bibliotecas  neste projeto  
+1. [React](https://pt-br.reactjs.org/)
+2. [Styled-Components](https://styled-components.com/)
+3. [Toastift](https://fkhadra.github.io/react-toastify/introduction)
+4. [React-router-dom@v6](https://reactrouter.com/docs/en/v6/getting-started/overview)
+5. [Axios](https://axios-http.com/ptbr/docs/intro)
+ 
+ ### Sites usados neste projeto
+ 1. [photopea](https://www.photopea.com/)
+ 2. [encurtador de url](https://www.encurtador.com.br/url-encurtada.php)
+ 3. [videos incorporados do youtube](https://support.google.com/youtube/answer/171780?hl=pt-BR)
+ 
+ ### programas usados para tirar print da tela e gravaçoes
+1. [link dos recursos de gravacao e print](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden)
+2. [link dos recursos de gravacao e print](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ ## Home
+![print da tela inicial](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/Screenshot_5.png)
 
-### `npm run eject`
+[para mais imagens do projeto click no link](https://github.com/lucasrip/supera2/tree/main/PrintsDesafio1).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Link para video de teste do projeto na versel
+[link do Video de teste do projeto](https://www.youtube.com/watch?v=eRo7iamriqw).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Link do projeto
+[link do projeto na versel](https://supera2.vercel.app/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+muito obrigado por chegar ate aquie e nois 👊 :punch:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
