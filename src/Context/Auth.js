@@ -1,6 +1,8 @@
 import axios from "axios";
 
 import { createContext,useState,useEffect} from "react";
+import Produtos from '../storage/products';
+
 
 export const Context = createContext({});
 
@@ -24,6 +26,11 @@ export const AuthProvider = (props) =>
       })
      },[setProdutos]) 
 
+     if(produtos.length === 0)
+     {
+         setProdutos(Produtos);
+     }
+    
 
   return(
      <Context.Provider value={
