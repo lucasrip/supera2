@@ -9,6 +9,7 @@
 ## Versao do node usado neste projeto v16.13.2
 
 ### para rodar esta projeto na sua maquia
+voce precisara do node e react instalados para poder rodar o projeto
 1. click em supera2 no topo da pagina
 2. clone o repositorico em Code 
 3. abra o projeto no seu editor de codigo
