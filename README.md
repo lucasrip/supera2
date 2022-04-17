@@ -1,70 +1,40 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![print da tela inicial](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/lucasrip%20_%20supera2-banner%20(1).png)
 
-## Available Scripts
+# E-commerce
+ Este e o primerio desafio do processo seletivo supera feito em react
 
-In the project directory, you can run:
+### Projeto foi gerado com o react cli 
 
-### `npm start`
+## Versao do node usado neste projeto v16.13.2
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### para rodar esta projeto na sua maquia
+1. click em supera2 no topo da pagina
+2. clone o repositorico em Code 
+3. abra o projeto no seu editor de codigo
+4. use o comando npm install
+5. depois npm start para inciciar o server local do projeto
+6. seja feliz
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ ### bibliotecas e sites usados neste projeto  []()
+1.[React](https://pt-br.reactjs.org/)
+2.[Styled-Components](https://styled-components.com/)
+3.[Toastift](https://fkhadra.github.io/react-toastify/introduction)
+4.[React-router-dom@v6](https://reactrouter.com/docs/en/v6/getting-started/overview)
+5.[Axios](https://axios-http.com/ptbr/docs/intro)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. 
+ ## Home
+![print da tela inicial](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/Screenshot_5.png)
 
-### `npm run build`
+[para mais imagens do projeto click no link](https://github.com/lucasrip/supera2/tree/main/PrintsDesafio1).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Link para video de teste do projeto na versel
+[link do Video de teste do projeto](https://www.youtube.com/watch?v=eRo7iamriqw).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Link do projeto
+[link do projeto na versel](https://supera2.vercel.app/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
