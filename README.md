@@ -43,8 +43,8 @@
  3. [videos incorporados do youtube](https://support.google.com/youtube/answer/171780?hl=pt-BR)
  
  ### programas usados para tirar print da tela e gravaçoes
-1 [link dos recursos de gravacao e print](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden)
-2 [link dos recursos de gravacao e print](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)
+1. [link dos recursos de gravacao e print](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden)
+2. [link dos recursos de gravacao e print](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)
 
  ## Home
 ![print da tela inicial](https://github.com/lucasrip/supera2/blob/main/PrintsDesafio1/Screenshot_5.png)
